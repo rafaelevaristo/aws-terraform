@@ -104,6 +104,11 @@ output "instance_public_ip" {
   value       = aws_instance.flask_instance.public_ip
 }
 
+output "instance_public_dns_name" {
+  description = "Public DNS name EC2 instance"
+  value       = aws_instance.flask_instance.public_dns
+}
+
 output "private_key" {
   value     = tls_private_key.example.private_key_pem
   sensitive = true
